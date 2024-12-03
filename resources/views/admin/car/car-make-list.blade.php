@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    @include('core::message')
+    @include('message')
     @section('page_title', 'Car Makes')
 
     <div class="card mb-4">

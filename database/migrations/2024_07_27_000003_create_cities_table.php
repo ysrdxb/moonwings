@@ -21,7 +21,7 @@ return new class extends Migration
         });
 
         Artisan::call('db:seed', [
-            '--class' => \Modules\Core\Database\Seeders\CountriesAndCitiesSeeder::class,
+            '--class' => \Database\Seeders\CountriesAndCitiesSeeder::class,
         ]);
 
     }  

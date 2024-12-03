@@ -1,5 +1,5 @@
 <div>
-    @include('core::message')
+    @include('message')
     <div class="row">
         <!-- First Column -->
         <div class="col-md-4">

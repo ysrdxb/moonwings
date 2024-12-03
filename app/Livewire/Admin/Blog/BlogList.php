@@ -20,7 +20,7 @@ class BlogList extends Component
             ->where('title', 'like', "%{$this->search}%")
             ->paginate(10);
 
-        return view('blog::livewire.admin.blog-list', [
+        return view('admin.blog.blog-list', [
             'blogs' => $blogs,
             'categories' => BlogCategory::all(),
         ]);

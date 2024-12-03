@@ -32,7 +32,7 @@ class BlogCrud extends Component
 
     public function render()
     {
-        return view('admin..blog.blog-crud', [
+        return view('admin.blog.blog-crud', [
             'blogs' => Blog::with('category', 'user')->paginate(12),
             'categories' => BlogCategory::all(),
         ]);

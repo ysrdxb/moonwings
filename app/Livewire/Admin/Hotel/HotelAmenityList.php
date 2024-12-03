@@ -44,7 +44,7 @@ class HotelAmenityList extends Component
         $amenities = HotelAmenity::where('name', 'like', '%' . $this->search . '%')
             ->paginate(10);
 
-        return view('hotel::livewire.admin.hotel-amenity-list', [
+        return view('admin.hotel.hotel-amenity-list', [
             'amenities' => $amenities
         ]);
     }

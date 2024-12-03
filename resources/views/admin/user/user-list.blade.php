@@ -1,6 +1,6 @@
 <!-- views/livewire/admin/user-list.blade.php -->
 <div class="container-fluid">
-    @include('core::message')
+    @include('message')
 
     <div class="card mb-4">
         <div class="card-body">

@@ -3,6 +3,14 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+Livewire::setScriptRoute(function($handle) {
+    return Route::get('/moonwingx/public/livewire/livewire.js', $handle);
+});
+
+Livewire::setUpdateRoute(function($handle) {
+    return Route::get('/moonwingx/public/livewire/update', $handle);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,3 +26,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+require __DIR__.'/admin.php';

@@ -7,9 +7,9 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
-use Modules\Car\Entities\Car;
-use Modules\Car\Entities\CarCategory;
-use Modules\Car\Entities\CarModel;
+use App\Models\Car;
+use App\Models\CarCategory;
+use App\Models\CarModel;
 
 class CarCrud extends Component
 {

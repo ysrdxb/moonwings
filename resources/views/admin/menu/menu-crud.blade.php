@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    @include('core::message')
+    @include('message')
 
     <div class="row">
         <!-- Menu Form -->

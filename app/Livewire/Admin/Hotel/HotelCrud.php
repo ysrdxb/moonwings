@@ -191,6 +191,6 @@ class HotelCrud extends Component
     {
         $locations = Location::all();
         $amenities = HotelAmenity::all();
-        return view('hotel::livewire.admin.hotel-crud', compact('locations', 'amenities'));
+        return view('admin.hotel.hotel-crud', compact('locations', 'amenities'));
     }
 }

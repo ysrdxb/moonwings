@@ -4,7 +4,7 @@ namespace App\Livewire\Admin\Car;
 
 use Livewire\Component;
 use Livewire\WithPagination;
-use Modules\Car\Entities\CarModel;
+use App\Models\CarModel;
 
 class CarModelList extends Component
 {

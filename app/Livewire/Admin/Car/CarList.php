@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Car\Livewire\Admin;
+namespace App\Livewire\Admin\Car;
 
 use Livewire\Component;
 use Livewire\WithPagination;
-use Modules\Car\Entities\Car;
+use App\Models\Car;
 
 class CarList extends Component
 {

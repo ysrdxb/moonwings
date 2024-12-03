@@ -1,14 +1,41 @@
 <?php
 
-Route::prefix('admin')->group([], function () {
+use App\Livewire\Admin\User\UserList;
+use App\Livewire\Admin\User\UserCrud;
+use App\Livewire\Admin\Setting\CountryList;
+use App\Livewire\Admin\Setting\CountryCrud;
+use App\Livewire\Admin\Setting\CityList;
+use App\Livewire\Admin\Setting\CityCrud;
+use App\Livewire\Admin\Setting\LocationCrud;
+use App\Livewire\Admin\Setting\CurrencyCrud;
+use App\Livewire\Admin\Setting\LanguageCrud;
+use App\Livewire\Admin\Setting\SettingsCrud;
+use App\Livewire\Admin\Page\PageList;
+use App\Livewire\Admin\Page\PageCrud;
+use App\Livewire\Admin\Module\Modules;
+use App\Livewire\Admin\Menu\MenuCrud;
+use App\Livewire\Admin\Hotel\HotelAmenityCrud;
+use App\Livewire\Admin\Hotel\HotelAmenityList;
+use App\Livewire\Admin\Hotel\HotelList;
+use App\Livewire\Admin\Hotel\HotelCrud;
+use App\Livewire\Admin\Car\CarCategoryList;
+use App\Livewire\Admin\Car\CarCategoryCrud;
+use App\Livewire\Admin\Car\CarMakeList;
+use App\Livewire\Admin\Car\CarMakeCrud;
+use App\Livewire\Admin\Car\CarModelList;
+use App\Livewire\Admin\Car\CarModelCrud;
+use App\Livewire\Admin\Car\CarList;
+use App\Livewire\Admin\Car\CarCrud;
+use App\Livewire\Admin\Blog\BlogCategoryList;
+use App\Livewire\Admin\Blog\BlogCategoryCrud;
+use App\Livewire\Admin\Blog\BlogList;
+use App\Livewire\Admin\Blog\BlogCrud;
+
+Route::prefix('admin')->group(function () {
     Route::get('/dashboard', UserList::class)->name('admin.dashboard');
     Route::get('/user', UserList::class)->name('admin.user');
     Route::get('/user/create', UserCrud::class)->name('admin.user.create');
     Route::get('/user/edit/{id}', UserCrud::class)->name('admin.user.edit');
-
-    Route::middleware('auth')->group(function(){
-        Route::get('/theme', ThemeManager::class)->name('admin.theme');
-    });
 
     Route::get('/countries', CountryList::class)->name('admin.countries');
     Route::get('/countries/create', CountryCrud::class)->name('admin.countries.create');

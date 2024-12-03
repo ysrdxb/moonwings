@@ -3,7 +3,7 @@
 namespace App\Livewire\Admin\Car;
 
 use Livewire\Component;
-use Modules\Car\Entities\CarMake;
+use App\Models\CarMake;
 
 class CarMakeCrud extends Component
 {
